@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Roblox Luau scripts with one-click copying.">
+  <title>IdealScripts — Roblox Luau Scripts</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <button class="wordmark" id="homeLogo" aria-label="IdealScripts home"><span>Ideal</span>Scripts</button>
+    <nav class="top-nav" aria-label="Main navigation">
+      <button class="nav-button active" id="homeButton">Home</button>
+      <button class="nav-button" id="scriptsButton">Scripts</button>
+      <button class="nav-button" id="creditsButton">Credits</button>
+      <a class="discord-link discord-target" href="#" target="_blank" rel="noreferrer" aria-label="Join the Discord server" title="Discord">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 8.4a8.8 8.8 0 0 1 7.6 0M9.1 15.7c2 1.3 3.8 1.3 5.8 0"/><path d="M7.1 5.4A15 15 0 0 1 10 4.5l.5 1a11 11 0 0 1 3 0l.5-1a15 15 0 0 1 2.9.9c2.2 3 2.8 5.9 2.4 8.8a12 12 0 0 1-3.6 1.8l-.9-1.3c.7-.3 1.3-.7 1.9-1.2-3.1 1.5-6.3 1.5-9.4 0 .6.5 1.2.9 1.9 1.2L8.3 16a12 12 0 0 1-3.6-1.8c-.4-2.9.2-5.8 2.4-8.8Z"/><circle cx="9.5" cy="11.5" r="1"/><circle cx="14.5" cy="11.5" r="1"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <aside class="sidebar" aria-label="Script categories">
+    <div class="category-tabs" id="categoryTabs" role="tablist" aria-orientation="vertical"></div>
+    <p class="side-credit">Created by <button id="creditName">Unknown272174</button></p>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+    <div id="libraryView">
+      <section class="hero" id="home">
+        <p class="eyebrow"><span></span> Script Library</p>
+        <h1>Roblox <em>Luau Scripts</em></h1>
+
+        <div class="search-wrap" id="searchWrap" role="combobox" aria-haspopup="listbox" aria-expanded="false">
+          <label class="search-box">
+            <span class="search-icon" id="searchIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            </span>
+            <span class="sr-only">Search all scripts</span>
+            <input id="searchInput" type="search" placeholder="Search scripts..." autocomplete="off" spellcheck="false">
+            <button class="clear-search hidden" id="clearSearch" type="button" aria-label="Clear search">×</button>
+            <span class="search-key" id="searchKey"><b>Ctrl</b> K</span>
+          </label>
+
+          <div class="search-suggestions" id="searchSuggestions">
+            <div class="suggestion-heading"><span>Quick searches</span><small>All categories</small></div>
+            <div class="suggestion-list">
+              <button data-search="Mobile">Mobile <span>→</span></button>
+              <button data-search="UI">UI <span>→</span></button>
+              <button data-search="Server">Server <span>→</span></button>
+              <button data-search="Visual">Visual <span>→</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-filters" aria-label="Quick searches">
+          <span>Try:</span>
+          <button data-search="Mobile">Mobile</button>
+          <button data-search="UI">UI</button>
+          <button data-search="Server">Server</button>
+        </div>
+      </section>
+
+      <section class="scripts-section" id="scripts" aria-live="polite">
+        <div class="section-heading">
+          <div><p id="sectionLabel">Popular Scripts</p><h2 id="sectionTitle">Scripts</h2></div>
+          <span class="result-count" id="resultCount">0 scripts</span>
+        </div>
+        <div class="script-list" id="scriptList"></div>
+        <div class="empty-state hidden" id="emptyState">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <h3>No scripts found</h3>
+          <p>Try a shorter search or another category.</p>
+          <div class="empty-actions"><button id="emptyClear">Clear search</button><button class="secondary" id="emptyPopular">Popular scripts</button></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="credits-page hidden" id="creditsView">
+      <p class="eyebrow"><span></span> Credits</p>
+      <h1>IdealScripts <em>Credits</em></h1>
+      <p class="credits-lead">Created and maintained by Unknown272174.</p>
+      <div class="credit-card"><div class="avatar">U</div><div><span>Creator &amp; developer</span><h2>Unknown272174</h2><p>IdealScripts creator.</p></div></div>
+      <button class="browse-button" id="browseButton">Browse scripts <span>→</span></button>
+    </section>
+
+    <footer>
+      <button class="wordmark small" id="footerHome"><span>Ideal</span>Scripts</button>
+      <p>Created by <strong>Unknown272174</strong></p>
+      <a class="footer-discord discord-target" href="#" target="_blank" rel="noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 8.4a8.8 8.8 0 0 1 7.6 0M9.1 15.7c2 1.3 3.8 1.3 5.8 0"/><path d="M7.1 5.4A15 15 0 0 1 10 4.5l.5 1a11 11 0 0 1 3 0l.5-1a15 15 0 0 1 2.9.9c2.2 3 2.8 5.9 2.4 8.8a12 12 0 0 1-3.6 1.8l-.9-1.3c.7-.3 1.3-.7 1.9-1.2-3.1 1.5-6.3 1.5-9.4 0 .6.5 1.2.9 1.9 1.2L8.3 16a12 12 0 0 1-3.6-1.8c-.4-2.9.2-5.8 2.4-8.8Z"/></svg>
+        Discord
+      </a>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status">Script copied</div>
+</body>
+</html>
