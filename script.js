@@ -1,5 +1,5 @@
 // Replace this with your Discord invite link.
-const DISCORD_URL = "https://discord.gg/PUT-YOUR-INVITE-HERE";
+const DISCORD_URL = "https://discord.gg/RQtdhjpKrY";
 
 /*
   HOW TO ADD A SCRIPT
