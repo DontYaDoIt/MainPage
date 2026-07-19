@@ -15,40 +15,17 @@ const SCRIPTS = [
     category: "popular",
     tags: ["Exploit"],
     features: ["Scan Answers", "Auto Complete"],
-    code: `https://raw.githubusercontent.com/tbest8403-dotcom/IS_00003383828282/refs/heads/main/Sudoku`,
-    featured: true,
+    code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/tbest8403-dotcom/IS_00003383828282/refs/heads/main/Sudoku"))()`,
   },
   {
     id: 2,
-    title: "Interface Starter",
-    description: "A draggable interface shell for game tools.",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=85",
-    category: "latest",
-    tags: ["UI", "Starter"],
-    features: ["Draggable window", "Responsive sizing", "Theme variables"],
-    code: `-- Interface Starter (Example)\nlocal Players = game:GetService("Players")\n\nlocal ScreenGui = Instance.new("ScreenGui")\nScreenGui.Name = "IdealInterface"\nScreenGui.ResetOnSpawn = false\nScreenGui.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")\n\nlocal Main = Instance.new("Frame")\nMain.Size = UDim2.fromOffset(320, 190)\nMain.Position = UDim2.new(0.5, -160, 0.5, -95)\nMain.BackgroundColor3 = Color3.fromRGB(16, 22, 31)\nMain.Parent = ScreenGui`,
-  },
-  {
-    id: 3,
-    title: "Team Visuals",
-    description: "Team-colored character highlights.",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85",
-    category: "visuals",
-    tags: ["Visual", "Teams"],
-    features: ["Team colors", "Auto refresh", "Customizable"],
-    code: `-- Team Visuals (Example)\nlocal Players = game:GetService("Players")\n\nlocal function AddHighlight(Character, Color)\n\tlocal Highlight = Instance.new("Highlight")\n\tHighlight.FillColor = Color\n\tHighlight.FillTransparency = 0.55\n\tHighlight.Parent = Character\nend\n\nfor _, Player in Players:GetPlayers() do\n\tif Player.Character then\n\t\tAddHighlight(Player.Character, Player.TeamColor.Color)\n\tend\nend`,
-   
-  },
-  {
-    id: 4,
-    title: "Cooldown Module",
-    description: "Server cooldowns for abilities and tools.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=85",
-    category: "utilities",
-    tags: ["Module", "Server"],
-    features: ["Per-player timers", "Automatic cleanup", "Reusable API"],
-    code: `-- Cooldown Module (Example)\nlocal Cooldowns = {}\n\nlocal function IsReady(Player, Name, Duration)\n\tlocal Key = tostring(Player.UserId) .. ":" .. Name\n\tlocal Now = os.clock()\n\tif (Cooldowns[Key] or 0) > Now then return false end\n\tCooldowns[Key] = Now + Duration\n\treturn true\nend\n\nreturn IsReady`,
-  
+    title: "MM2",
+    description: "MM2 Script.",
+    image: "https://static.wikia.nocookie.net/murdermystery/images/3/30/MM2logo.png/revision/latest?cb=20141230012338",
+    category: "popular",
+    tags: ["Exploit"],
+    features: ["Silent Aim", "Visuals", "Preview"],
+    code: `loadstring(game:HttpGet("https://raw.githubusercontent.com/tbest8403-dotcom/IS_00003383828282/refs/heads/main/MM2"))()`,
   }
 ];
 
