@@ -9,15 +9,14 @@ const DISCORD_URL = "https://discord.gg/RQtdhjpKrY";
 const SCRIPTS = [
   {
     id: 1,
-    title: "Movement Toolkit",
-    description: "Movement controls for keyboard and mobile.",
-    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=85",
+    title: "Sudoku",
+    description: "Sudoku Script.",
+    image: "https://tr.rbxcdn.com/180DAY-c655deda19ed53d35a1e9012009b6adf/500/280/Image/Jpeg/noFilter",
     category: "popular",
-    tags: ["Utility", "Mobile"],
-    features: ["Smooth controls", "Mobile friendly", "Easy setup"],
-    code: `-- Movement Toolkit (Example)\nlocal Players = game:GetService("Players")\nlocal UserInputService = game:GetService("UserInputService")\n\nlocal Player = Players.LocalPlayer\n\nUserInputService.InputBegan:Connect(function(Input, Processed)\n\tif Processed then return end\n\tif Input.KeyCode == Enum.KeyCode.Space then\n\t\tprint(Player.Name .. " jumped")\n\tend\nend)`,
+    tags: ["Exploit"],
+    features: ["Scan Answers", "Auto Complete"],
+    code: `https://raw.githubusercontent.com/tbest8403-dotcom/IS_00003383828282/refs/heads/main/Sudoku`,
     featured: true,
-    added: "Today"
   },
   {
     id: 2,
@@ -28,7 +27,6 @@ const SCRIPTS = [
     tags: ["UI", "Starter"],
     features: ["Draggable window", "Responsive sizing", "Theme variables"],
     code: `-- Interface Starter (Example)\nlocal Players = game:GetService("Players")\n\nlocal ScreenGui = Instance.new("ScreenGui")\nScreenGui.Name = "IdealInterface"\nScreenGui.ResetOnSpawn = false\nScreenGui.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")\n\nlocal Main = Instance.new("Frame")\nMain.Size = UDim2.fromOffset(320, 190)\nMain.Position = UDim2.new(0.5, -160, 0.5, -95)\nMain.BackgroundColor3 = Color3.fromRGB(16, 22, 31)\nMain.Parent = ScreenGui`,
-    added: "2 days ago"
   },
   {
     id: 3,
@@ -39,7 +37,7 @@ const SCRIPTS = [
     tags: ["Visual", "Teams"],
     features: ["Team colors", "Auto refresh", "Customizable"],
     code: `-- Team Visuals (Example)\nlocal Players = game:GetService("Players")\n\nlocal function AddHighlight(Character, Color)\n\tlocal Highlight = Instance.new("Highlight")\n\tHighlight.FillColor = Color\n\tHighlight.FillTransparency = 0.55\n\tHighlight.Parent = Character\nend\n\nfor _, Player in Players:GetPlayers() do\n\tif Player.Character then\n\t\tAddHighlight(Player.Character, Player.TeamColor.Color)\n\tend\nend`,
-    added: "1 week ago"
+   
   },
   {
     id: 4,
@@ -50,7 +48,7 @@ const SCRIPTS = [
     tags: ["Module", "Server"],
     features: ["Per-player timers", "Automatic cleanup", "Reusable API"],
     code: `-- Cooldown Module (Example)\nlocal Cooldowns = {}\n\nlocal function IsReady(Player, Name, Duration)\n\tlocal Key = tostring(Player.UserId) .. ":" .. Name\n\tlocal Now = os.clock()\n\tif (Cooldowns[Key] or 0) > Now then return false end\n\tCooldowns[Key] = Now + Duration\n\treturn true\nend\n\nreturn IsReady`,
-    added: "2 weeks ago"
+  
   }
 ];
 
