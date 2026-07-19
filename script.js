@@ -21,7 +21,7 @@ const SCRIPTS = [
     id: 2,
     title: "MM2",
     description: "MM2 Script.",
-    image: "https://static.wikia.nocookie.net/murdermystery/images/3/30/MM2logo.png/revision/latest?cb=20141230012338",
+    image: "https://tr.rbxcdn.com/180DAY-5ba706807447783862364dfef7a465ff/500/280/Image/Jpeg/noFilter",
     category: "popular",
     tags: ["Exploit"],
     features: ["Silent Aim", "Visuals", "Preview"],
